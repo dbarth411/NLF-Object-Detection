@@ -76,11 +76,11 @@ A description of anchor boxes is available in the open source project and is quo
 
 I used stats for both width and height of our ground truth boxes and distribution plots to get an idea of how to implement specialized anchor boxes for this particular dataset.
 
-![width_div_height](saved_images/wid_div_height.png)
+![width_div_height](saved_images/width_div_height.png)
 
 Plotting Width / Height helps determine that the majority of bounding boxes are relatively square, so keeping the aspect ratios at 0.5, 1.0, and 1.5 would cover most of the ratios appropriately.
 
-![width_x_height](saved_images/wid_x_height.png)
+![width_x_height](saved_images/width_x_height.png)
 
 Plotting the width x height gives us a general idea of the areas of the bounding boxes. Scales were left the same as the open source project (2^x for x in 0, 1/3, 2/3). The original areas were set to x^2 for x in [32, 64, 128, 256, 512]. Since the helmets in most cases are very small objects, the areas were divided in half and set to x^2 for x in [16, 32, 64, 128, 256].
 
@@ -182,7 +182,7 @@ The scatterplot for impact detections:
 
 I created a side-by-side video of the end zone and sideline views showing the predicted helmet and impact detections.
 
-![final_video](saved_images/final.mp4)
+https://www.youtube.com/watch?v=8h1MnvDFl5Q
 
 
 # Conclusion: 
