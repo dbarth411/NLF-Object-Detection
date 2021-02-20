@@ -160,7 +160,7 @@ Although a little convoluted due to the amount of overall objects, you can get a
 
 Here is a visualization of an image with confidence scores:
 
-![detection](saved_images/visualize_detections.png)
+![img_detection](saved_images/visualize_detections.png)
 
 ### Detecting Impacts
 I set a strict filter for impacts using IoU between bounding box predictions for each image, knowing that helmets with impacts were extremely less likely than helmets without impacts. Any IoU between 0.1 and 0.4 was labeled as an impact. Since I was only dealing with 2D data and didn’t attempt to convert to 3D, this wasn’t overly accurate as mentioned before. There were several helmets without impact that had an IoU between .1 and .4 as shown below. The F1 Score was extremely low for impact detections.
