@@ -142,6 +142,10 @@ Using TPUs (Tensor Processing Units) is necessary to avoid extremely long traini
 
 I used 25 epochs and established train_steps and test_steps per epoch by dividing the total number of samples in each by the batch size of 8, then using the repeat() function to ensure the model doesn’t run out of data.
 
+Model structure as produced by a TensorBoard Graph:
+
+![model_structure](saved_images/RetinaNet_TPU_Structure.png)
+
 ### Soft Non-Max Suppression
 
 Since I replaced Non-Max Suppression earlier with predicting all possible results, I needed an alternate method to filter undesired results. Using TensorFlow’s tf.image.non_max_suppression_with_scores function, I was able to implement Soft-NMS, which works very similarly to the normal NMS function. Rather than eliminating predictions over a certain IoU threshold, Soft-NMS uses a sigma value (float between 0 and 1) to down-weight the confidence score of detections over the IoU threshold. Using an IoU threshold of 1.0 allowed me to keep all confidence scores as is and select the predictions for each object based on the confidence threshold alone. Ultimately, this eliminates any predictions under the specified confidence score and keeps potential true positives where bounding boxes are intersecting.
