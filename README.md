@@ -146,6 +146,7 @@ Model structure as produced by a TensorBoard Graph:
 
 ![retinanet](saved_images/retinanet.png)
 ![retinanet2](saved_images/retinanet2.png)
+![model_hist](saved_images/model_hist.svg)
 
 ### Soft Non-Max Suppression
 
