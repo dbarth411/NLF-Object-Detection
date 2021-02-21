@@ -144,7 +144,8 @@ I used 25 epochs and established train_steps and test_steps per epoch by dividin
 
 Model structure as produced by a TensorBoard Graph:
 
-![model](saved_images/retinanet.png)
+![retinanet1](saved_images/retinanet.png)
+![retinanet2](saved_images/retinanet2.png)
 
 ### Soft Non-Max Suppression
 
